@@ -90,7 +90,13 @@
 
 <h3 class="r-fit-twext fragment">ok .... y ¿estocástico?</h3>
 </section>
-				<section >
+				<section data-background-color="white">
+					<img class="" src="img/santiago.jpeg" />
+
+
+				</section>
+
+				<section data-background-color="white">
 
 					<img class="r-stretch" src="img/cienciadedatos.jpg" />
 
@@ -99,7 +105,9 @@
 				<section data-background-image="img/syllabus.png">
 </section>
 
-<section>Loro estocástico: un sistema que junta formas lingüísticas con base en probabilidades derivadas de macrodatos. Repite como un loro palabras desprovistas de significado genuino que sin embargo parecen genuinas gracias a procesos estocásticos.</section>
+<section> <h1>¿Entonces ?</h1>
+<p class="fragment">
+Loro estocástico: un sistema que junta formas lingüísticas con base en probabilidades derivadas de macrodatos. Repite como un loro palabras desprovistas de significado genuino que sin embargo parecen genuinas gracias a procesos estocásticos.</p> </section>
 
 <section data-background-image="img/escher4.jpeg" data-background-size= "contain"><p class="pop-up-text">¿Qué rol deben tener los loros estocásticos en nuestros espacios de aprendizaje?</p></section>
 
@@ -136,20 +144,33 @@
 
 </section>
 
-<section>Esta es una manera en que los seres humanos estamos sesgados: nos inclinamos a ver caras por todo lado.
+<section>Esta es una de las maneras en que los seres humanos estamos sesgados: nos inclinamos a ver caras por todo lado.
 
+<p class="fragment">Las ciencias del comportamiento estudian las diversas maneras en que los seres humanos tenemos esos sesgos y cómo intervienen cotidianamente en nuestra conducta.</p>
 
 </section>
 
 
-					<section data-background-image="img/bias.png" data-background-size= "contain">
+<section data-background-color="white"data-background-image="img/bias.png" data-background-size= "contain">
+<span class="attribution">Suresh & Guttag (2021)</a></span>
 
 				</section>
 
 
-					<section data-background-image="img/algojustice.jpg">
+<section> <h1>¿Entonces ?</h1>
+<p class="fragment">
+Injusticia algorítmica: injusticia causada por un modelo matemático con efectos en el mundo por fuera de la tecnología; no depende necesariamente de las intenciones de un sujeto específico. Depende del alcance, falta de transparencia y tipo de daño que cause.
 
-				</section>
+</p> </section>
+
+<section data-background-image="img/justicia.jpeg" data-background-size= "cover"><p class="pop-up-text">¿Cómo pueden estos loros estocásticos fomentar injusticias en el salón de clase?</p></section>
+
+
+<section data-background-image="img/loro.jpg" data-background-size= "cover"> <div class="pop-up-text"> <h1>Gracias</h1> <smal> Juan Camilo Espejo-Serna <br> juan.espejo1@unisabana.edu.co</smal></div>
+
+					<img class="r-stretch" src="img/asistencia.png" />
+
+</section>
 
 			</div>
 		</div>
@@ -172,7 +193,61 @@
 				slideNumber: true, 
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealAttribution ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealAttribution ],
+				dependencies: [{ src: 'plugin/spotlight/spotlight.js' }],
+				spotlight: {
+
+			// size of the spotlight
+			size: 60,
+			
+			// true: Locks the mouse pointer inside the presentation
+			// there is by design (Pointer Lock API) no spotlightCursor and presentingCursor 
+			// displayed regardless of the configured values 
+			lockPointerInsideCanvas: true,
+
+			// toggle spotlight by holding down the mouse key
+			toggleSpotlightOnMouseDown: true,
+
+			// the keyCode pressed and held to turn on spotlight, disabled when set to false
+			// Problems with this config? Maybe your touchpad is disabled on keypress? 
+			spotlightOnKeyPressAndHold: false,
+
+			// choose the cursor when spotlight is on. Maybe "crosshair"?
+			spotlightCursor: 'none',
+
+			// choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
+			presentingCursor: 'default', 
+
+			// true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
+			initialPresentationMode: true,
+
+			// true: disable selecting in presentation mode
+			disablingUserSelect: true,
+
+			// set to a number as transition duration in ms to enable fade in and out, disabled when set to false
+			fadeInAndOut: 100,
+
+			// enable pointer mode
+			useAsPointer: false,
+
+			// pointer color (If pointer mode enabled)
+			pointerColor: 'red'
+			},
+			keyboard: {	
+			// alternative to toggleSpotlightOnMouseDown: 
+			// toggle spotlight by pressing key 'c'
+			67: function() { RevealSpotlight.toggleSpotlight() },
+
+			// enter/leave presentation mode by pressing key 'p'
+			80: function() { 
+				RevealSpotlight.togglePresentationMode(); 
+			},
+	},
+
+		// ... 
+		
+
+
 			});
 		</script>
 	</body>

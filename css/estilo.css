@@ -609,3 +609,9 @@ visibility: inherit;
     border: 2px solid rgba(255, 255, 255, 0.5); /* Light border for contrast */
     display: inline-block; /* Adjusts the container to the content */
 }
+
+
+.reveal .backgrounds video {
+  filter: sepia(100%) contrast(90%) brightness(90%) saturate(50%) blur(2px);
+  -webkit-filter: sepia(100%) contrast(90%) brightness(90%) saturate(50%) blur(2px); /* For Safari support */
+}

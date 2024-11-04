@@ -611,7 +611,6 @@ visibility: inherit;
 }
 
 
-.reveal .backgrounds video {
+.reveal .background viddeo {
   filter: sepia(100%) contrast(90%) brightness(90%) saturate(50%) blur(2px);
   -webkit-filter: sepia(100%) contrast(90%) brightness(90%) saturate(50%) blur(2px); /* For Safari support */
-}
